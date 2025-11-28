@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{7D99E5F7-7FBA-4E8E-8F7C-41C5099A78EF}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
+		k6-load-test.js = k6-load-test.js
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlowClase.ApiGateway", "OrderFlowClase.ApiGateway\OrderFlowClase.ApiGateway.csproj", "{95A11FBE-577E-1321-CB33-D3785E93DFFD}"
@@ -17,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlowClase.ServiceDefaults", "OrderFlowClase.ServiceDefaults\OrderFlowClase.ServiceDefaults.csproj", "{861B17E4-9B75-4862-B2EC-34FCB6E9F939}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlowClase.Shared", "OrderFlowClase.Shared\OrderFlowClase.Shared.csproj", "{AF914249-88F0-492C-A985-72A1A918A88D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderFlowClase.Notifications", "OrderFlowClase.Notifications\OrderFlowClase.Notifications.csproj", "{018B66AB-AF4B-884F-C31D-98F877703170}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +47,10 @@ Global
 		{AF914249-88F0-492C-A985-72A1A918A88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF914249-88F0-492C-A985-72A1A918A88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF914249-88F0-492C-A985-72A1A918A88D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018B66AB-AF4B-884F-C31D-98F877703170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018B66AB-AF4B-884F-C31D-98F877703170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018B66AB-AF4B-884F-C31D-98F877703170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018B66AB-AF4B-884F-C31D-98F877703170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

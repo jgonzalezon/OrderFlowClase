@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-OrderFlowClase.Notifications-2ab0bcaf-7bdf-440d-9a0c-a3872d86dd40</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="MassTransit.RabbitMQ" />
+	<PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrderFlowClase.ServiceDefaults\OrderFlowClase.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\OrderFlowClase.Shared\OrderFlowClase.Shared.csproj" />
+  </ItemGroup>
+</Project>

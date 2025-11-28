@@ -34,4 +34,9 @@ builder.AddProject<Projects.OrderFlowClase_ApiGateway>("orderflowclase-apigatewa
     .WaitFor(identity);
 
 
+builder.AddProject<Projects.OrderFlowClase_Notifications>("orderflowclase-notifications")
+    .WaitFor(rabbit)
+    .WithReference(rabbit);
+
+
 builder.Build().Run();

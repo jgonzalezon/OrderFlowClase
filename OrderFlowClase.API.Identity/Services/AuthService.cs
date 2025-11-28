@@ -86,22 +86,13 @@ namespace OrderFlowClase.API.Identity.Services
 
         }
 
-        public async Task<RegisterResult> Register(string email, string password)
+        public async Task<bool> Register(string email, string password)
         {
             var result = await _userManager.CreateAsync(new IdentityUser
             {
                 UserName = email.Split("@")[0],
                 Email = email
             }, password);
-
-            if (!result.Succeeded)
-            {
-                return new RegisterResult
-                {
-                    Succeeded = false,
-                    Errors = result.Errors.Select(e => e.Description)
-                };
-            }
 
             var user = await _userManager.FindByEmailAsync(email);
 
@@ -110,7 +101,10 @@ namespace OrderFlowClase.API.Identity.Services
                 await _publishEndpoint.Publish(new UserCreatedEvent(user.Id, user.Email!));
             }
 
-            return new RegisterResult { Succeeded = true };
+            if (result != null) return true;
+
+            return false;
+
         }
     }
 

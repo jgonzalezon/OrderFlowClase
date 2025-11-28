@@ -9,7 +9,7 @@ const registerRate = new Rate('register_success_rate');
 const registerDuration = new Trend('register_duration');
 
 // Configuration - can be overridden via environment variables
-const BASE_URL = __ENV.BASE_URL || 'https://localhost:7049';
+const BASE_URL = __ENV.BASE_URL || 'https://localhost:7236';
 const ENDPOINT = __ENV.ENDPOINT || '/api/v1/auth/register';
 
 // Test options
@@ -17,10 +17,10 @@ export const options = {
     // Load test stages - aggressive ramp up from 10 to 100 users over 2 minutes
     stages: [
         { duration: '10s', target: 10 },   // Start with 10 users
-        { duration: '30s', target: 30 },   // Ramp to 30 users
-        { duration: '30s', target: 60 },   // Ramp to 60 users
-        { duration: '30s', target: 100 },  // Ramp to 100 users
-        { duration: '20s', target: 100 },  // Stay at 100 users
+        { duration: '30s', target: 20 },   // Ramp to 30 users
+        { duration: '30s', target: 30 },   // Ramp to 60 users
+        { duration: '30s', target: 50 },  // Ramp to 100 users
+        { duration: '20s', target: 50 },  // Stay at 100 users
         { duration: '20s', target: 0 },    // Ramp down to 0 users
     ],
     // Thresholds
